@@ -273,6 +273,7 @@ nodeSlicer.render = function (options, callback) {
 
 	childProcess.exec(
 		shellCommand,
+		{ maxBuffer: 100 * 1024 * 1024 },
 		function (error, stdout, stderr) {
 
 			if (stderr && !stdout){
